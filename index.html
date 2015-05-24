@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego Boston</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sweet-alert.css">
+</head>
+<body>
+  <header>
+    <nav class="nav navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+  					<span class="icon-bar app-icon"></span>
+  					<span class="icon-bar app-icon"></span>
+  					<span class="icon-bar app-icon"></span>
+  				</button>
+          <a href="#" class="navbar-brand">Juego Boston</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="row">
+      <cols-xs-12 class="col-sm-12 text-center">
+        <div id="app-panel-sorteo">
+          <button class="btn btn-info" onclick="sortearTurno()">Sortear Turnos</button>
+          <div class="container">
+            <div class="col-xs-6">
+              <img src="images/dado0.png" id="dado-sorteo-1" alt="">
+            </div>
+            <div class="col-xs-6">
+              <img src="images/dado0.png" id="dado-sorteo-2" alt="">
+            </div>
+          </div>
+        </div>
+      </cols-xs-12>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="panel-dados" class="panel panel-success dados hidden">
+          <div class="panel-heading">
+            <h4>Resultado Lanzamiento:</h4>
+          </div>
+          <div class="panel-body text-center">
+            <img id="app-dado-0" src="images/dado0.png" alt="">
+            <img id="app-dado-1" src="images/dado0.png" alt="">
+            <img id="app-dado-2" src="images/dado0.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h4 class="text-center">Mensaje</h4>
+          </div>
+          <div class="panel-body text-center">
+            <h2 id="mensaje"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6">
+        <h4>Persona</h4>
+        <button class="btn btn-primary disabled" id="mano1">Tirar Dados</button>
+        <br>
+        <ul id="puntajes-Persona" class="list-group">
+          <li class="list-group-item app-lista1 app-head-list">
+            <h2>puntajes<span class="badge pull-right" id="puntaje-1">0</span></h2>
+          </li>
+          <!-- Aqui agregar puntajes -->
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-6">
+        <h4>Ordenador</h4>
+        <button class="btn btn-default disabled" id="mano2">Tirar Dados</button>
+        <br>
+        <ul id="puntajes-Ordenador" class="list-group">
+          <li class="list-group-item app-lista1 app-head-list">
+            <h2>puntajes<span class="badge pull-right" id="puntaje-2">0</span></h2>
+          </li>
+          <!-- Aqui agregar puntajes -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/main2.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/sweet-alert.min.js"></script>
+</body>
+</html>
