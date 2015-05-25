@@ -36,7 +36,6 @@ FUNCIONES: MOTOR DE JUEGOS
 function jugar(tiro, jugador){
   tirarDados(dados)
   muestraDados(jugador)
-  addResultadoLista(jugador)
 
   if(validaBonus(dados) && tiro < 2) {
     jugador.addPuntaje(bonus[tiro])
@@ -45,6 +44,7 @@ function jugar(tiro, jugador){
     dados.sort()
     jugador.addPuntaje(dados[dados.length - 1])
   }
+  addResultadoLista(jugador)
   validaGanador()
   dados.pop()
 }
@@ -161,7 +161,7 @@ function ocultaDados(){
 
 function addResultadoLista(jugador){
   var li = document.createElement("li")
-  li.innerHTML = dados.toString()
+  li.innerHTML = `${dados.toString()} >> Acumulado: ${jugador.getPuntaje()}`
   classie.add(li, "list-group-item")
   document.getElementById(`puntajes-${jugador.getNombre()}`).appendChild(li)
 }
