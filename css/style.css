@@ -2,3 +2,10 @@
   background-color: #666;
   color: white;
 }
+
+.app-footer{
+  background-color: cornflowerblue;
+  color: white;
+  margin-top: 20px;
+  padding: 15px 0;
+}
